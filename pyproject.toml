@@ -1,0 +1,17 @@
+[project]
+name = "indicator-wrapper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "hazard",
+    "stactools-osc-hazard",
+    "typer>=0.15.2",
+    "cf-xarray==0.9.4",
+    "xarray==2023.1.0"
+]
+
+[tool.uv.sources]
+hazard = { git = "https://github.com/joemoorhouse/hazard", rev = "2a989c87935d8b9b0335f46ff1ba7e327a8b9944" }
+stactools-osc-hazard = { git = "https://github.com/developmentseed/osc-hazard", rev = "588b4ee98c8aee4a2aa57ea181a847d61a36e0c6" }
