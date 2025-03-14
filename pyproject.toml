@@ -14,4 +14,4 @@ dependencies = [
 
 [tool.uv.sources]
 hazard = { git = "https://github.com/joemoorhouse/hazard", rev = "2a989c87935d8b9b0335f46ff1ba7e327a8b9944" }
-stactools-osc-hazard = { git = "https://github.com/developmentseed/osc-hazard", rev = "588b4ee98c8aee4a2aa57ea181a847d61a36e0c6" }
+stactools-osc-hazard = { git = "https://github.com/developmentseed/osc-hazard", rev = "fc7291adc84d9e644a7b6891ce4b984e1aabde7f" }
