@@ -4,9 +4,9 @@ import os
 from enum import Enum
 from typing import Dict, Optional, Any, List
 from hazard import services
-from stactools.osc_hazard import commands
 
 import pydantic
+from stactools.osc_hazard.commands import cubify_invocation, collection_invocation, item_invocation
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -63,7 +63,7 @@ def degree_days_indicator(indicator_generation_params: Annotated[IndicatorGenera
         bucket=indicator_generation_params.bucket,
         prefix=indicator_generation_params.prefix,
         store=indicator_generation_params.store,
-        write_xarray_compatible_zarr=indicator_generation_params.write_xarray_compatible_zarr,
+        write_xarray_compatible_zarr=False,
         dask_cluster_kwargs=indicator_generation_params.dask_cluster_kwargs,
     )
 
@@ -83,7 +83,7 @@ def days_tas_above_indicator(indicator_generation_params: Annotated[IndicatorGen
         bucket=indicator_generation_params.bucket,
         prefix=indicator_generation_params.prefix,
         store=indicator_generation_params.store,
-        write_xarray_compatible_zarr=indicator_generation_params.write_xarray_compatible_zarr,
+        write_xarray_compatible_zarr=False,
         dask_cluster_kwargs=indicator_generation_params.dask_cluster_kwargs,
     )
 
@@ -95,10 +95,18 @@ def generate_indicators(indicator_generation_params: Annotated[IndicatorGenerati
     if indicator_generation_params.indicator == IndicatorType.days_tas_above:
         logger.info("Generating Days TAS Above Indicators")
         days_tas_above_indicator(indicator_generation_params)
-    output_dir = indicator_generation_params.store
-    logger.info("Generated indicators, now generating cubified zarr")
-    commands.cubify_invocation(store_path=f"{output_dir}/chronic_heat/osc/v2", output_dir=f"{output_dir}/cubified/", indicator_name=indicator_generation_params.indicator.value.replace("_indicator", ""))
-    logger.info("Generated cubified zarr")
+
+@app.command()
+def cubify_indicator(store_path: str, output_dir: str, indicator_name: str):
+    cubify_invocation(store_path, output_dir, indicator_name)
+
+@app.command()
+def create_collection(sources: str, destination: str):
+    collection_invocation(sources, destination)
+
+@app.command()
+def create_item(source: str, destination: str):
+    item_invocation(source, destination)
 
 if __name__ == "__main__":
     app()

@@ -767,7 +767,7 @@ dependencies = [
 requires-dist = [
     { name = "cf-xarray", specifier = "==0.9.4" },
     { name = "hazard", git = "https://github.com/joemoorhouse/hazard?rev=2a989c87935d8b9b0335f46ff1ba7e327a8b9944" },
-    { name = "stactools-osc-hazard", git = "https://github.com/developmentseed/osc-hazard?rev=b6619d110e1db4962df51a5256b8879b554ac3d6" },
+    { name = "stactools-osc-hazard", git = "https://github.com/developmentseed/osc-hazard?rev=a07ed977a9627b9c79317c9a21b8bbd7719da187" },
     { name = "typer", specifier = ">=0.15.2" },
     { name = "xarray", specifier = "==2023.1.0" },
 ]
@@ -2024,7 +2024,7 @@ wheels = [
 [[package]]
 name = "stactools-osc-hazard"
 version = "0.1.0"
-source = { git = "https://github.com/developmentseed/osc-hazard?rev=b6619d110e1db4962df51a5256b8879b554ac3d6#b6619d110e1db4962df51a5256b8879b554ac3d6" }
+source = { git = "https://github.com/developmentseed/osc-hazard?rev=a07ed977a9627b9c79317c9a21b8bbd7719da187#a07ed977a9627b9c79317c9a21b8bbd7719da187" }
 dependencies = [
     { name = "hazard" },
     { name = "pystac" },
