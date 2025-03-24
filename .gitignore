@@ -14,3 +14,4 @@ generated-indicators*
 output*
 inputs*
 .eodh-key
+*.pem
