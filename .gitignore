@@ -15,3 +15,4 @@ output*
 inputs*
 .eodh-key
 *.pem
+fetch_hazard_indicator_inputs.yml
