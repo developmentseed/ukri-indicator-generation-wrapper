@@ -14,7 +14,6 @@ aws s3 cp "s3://$SRC_BUCKET/$SRC_PATH/" "$DEST_DIR/" --recursive --exclude "*" \
     --include "days_tas_above_*.json" \
     --include "degree_days_*.json" \
     --include "collection.json" \
-    2>&1 | tee $DEST_DIR/aws_output.log
-
+    --include "catalog.json"
 
 echo "Files have been organized into '$DEST_DIR'."
