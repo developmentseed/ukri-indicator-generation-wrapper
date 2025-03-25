@@ -77,7 +77,7 @@ $graph:
         outputBinding:
           glob: output
 
-    baseCommand: ["prepare-output.sh"]
+    baseCommand: ["/prepare-output.sh"]
 
     arguments:
       - valueFrom: $(inputs.hazard_indicator_key)
