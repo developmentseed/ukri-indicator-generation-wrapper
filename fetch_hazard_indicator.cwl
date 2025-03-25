@@ -13,13 +13,13 @@ $graph:
       hazard_indicator_key:
         type: string
         default: ""
-      aws_access_key_id:
+      hazard_aws_access_key_id:
         type: string
         default: ""
-      aws_secret_access_key:
+      hazard_aws_secret_access_key:
         type: string
         default: ""
-      aws_session_token:
+      hazard_aws_session_token:
         type: string
         default: ""
 
@@ -34,9 +34,9 @@ $graph:
         run: "#fetch-indicator-command"
         in:
           hazard_indicator_key: hazard_indicator_key
-          aws_access_key_id: aws_access_key_id
-          aws_secret_access_key: aws_secret_access_key
-          aws_session_token: aws_session_token
+          hazard_aws_access_key_id: hazard_aws_access_key_id
+          hazard_aws_secret_access_key: hazard_aws_secret_access_key
+          hazard_aws_session_token: hazard_aws_session_token
         out:
           - indicator-results
 
@@ -56,19 +56,19 @@ $graph:
         networkAccess: true
       EnvVarRequirement:
           envDef:
-            AWS_ACCESS_KEY_ID: $(inputs.aws_access_key_id)
-            AWS_SECRET_ACCESS_KEY: $(inputs.aws_secret_access_key)
-            AWS_SESSION_TOKEN: $(inputs.aws_session_token)
+            AWS_ACCESS_KEY_ID: $(inputs.hazard_aws_access_key_id)
+            AWS_SECRET_ACCESS_KEY: $(inputs.hazard_aws_secret_access_key)
+            AWS_SESSION_TOKEN: $(inputs.hazard_aws_session_token)
             AWS_DEFAULT_REGION: "eu-west-2"
 
     inputs:
       hazard_indicator_key:
         type: string
-      aws_access_key_id:
+      hazard_aws_access_key_id:
         type: string
-      aws_secret_access_key:
+      hazard_aws_secret_access_key:
         type: string
-      aws_session_token:
+      hazard_aws_session_token:
         type: string
 
     outputs:
