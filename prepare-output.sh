@@ -19,3 +19,4 @@ aws s3 cp "s3://$SRC_BUCKET/$SRC_PATH/" "$DEST_DIR/" --recursive --exclude "*" \
 echo "Files have been organized into '$DEST_DIR'."
 echo $(ls $DEST_DIR)
 echo $VALUE
+echo "All arguments (\$@): $@"
