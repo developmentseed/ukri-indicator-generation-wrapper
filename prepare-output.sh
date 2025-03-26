@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VALUE="$2"
+VALUE="$1"
 SRC_BUCKET="ukri-eodh-hazard-tiles-test"
 SRC_PATH="indicator-generation/$VALUE"
 DEST_DIR="output"

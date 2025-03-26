@@ -46,7 +46,7 @@ $graph:
 
     hints:
       DockerRequirement:
-        dockerPull: public.ecr.aws/c9k5s3u3/eodh/fetch-indicator-results:0.8.0
+        dockerPull: public.ecr.aws/c9k5s3u3/eodh/fetch-indicator-results:0.9.0
 
     requirements:
       ResourceRequirement:
