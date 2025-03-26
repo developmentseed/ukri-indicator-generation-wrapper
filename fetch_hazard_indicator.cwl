@@ -6,8 +6,8 @@ $graph:
     doc: Fetch a hazard indicator produced with os_climate_hazard
     requirements:
       ResourceRequirement:
-        coresMax: 2
-        ramMax: 4096
+        coresMax: 1
+        ramMax: 512
 
     inputs:
       hazard_indicator_key:
@@ -46,7 +46,7 @@ $graph:
 
     hints:
       DockerRequirement:
-        dockerPull: public.ecr.aws/c9k5s3u3/eodh/fetch-indicator-results:0.5.0
+        dockerPull: public.ecr.aws/c9k5s3u3/eodh/fetch-indicator-results:0.6.0
 
     requirements:
       ResourceRequirement:

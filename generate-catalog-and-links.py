@@ -21,7 +21,7 @@ def create_stac_catalog(directory):
 
         # Create catalog.json structure
         catalog = {
-            "stac_version": "1.0.0",
+            "stac_version": "1.1.0",
             "id": subdir,
             "type": "Catalog",
             "description": collection.get("description", "STAC Catalog"),
@@ -37,7 +37,7 @@ def create_stac_catalog(directory):
 
         # Process item files in the directory
         item_files = [f for f in os.listdir(subdir_path) if
-                      f.endswith(".json") and f != "collection.json" and f != "catalog.json"]
+                      f.endswith(".json") and f != "collection.json" and f != "catalog.json" and f != "inventory.json"]
 
         for item_file in item_files:
             item_path = os.path.join(subdir_path, item_file)

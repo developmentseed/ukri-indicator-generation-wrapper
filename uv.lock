@@ -1133,6 +1133,7 @@ dependencies = [
     { name = "cwltool" },
     { name = "hazard" },
     { name = "jupyter" },
+    { name = "stac-validator" },
     { name = "stactools-osc-hazard" },
     { name = "typer" },
     { name = "xarray" },
@@ -1144,6 +1145,7 @@ requires-dist = [
     { name = "cwltool", specifier = ">=3.1.20250110105449" },
     { name = "hazard", git = "https://github.com/joemoorhouse/hazard?rev=2a989c87935d8b9b0335f46ff1ba7e327a8b9944" },
     { name = "jupyter", specifier = ">=1.1.1" },
+    { name = "stac-validator", specifier = ">=3.6.0" },
     { name = "stactools-osc-hazard", git = "https://github.com/developmentseed/osc-hazard?rev=a07ed977a9627b9c79317c9a21b8bbd7719da187" },
     { name = "typer", specifier = ">=0.15.2" },
     { name = "xarray", specifier = "==2023.1.0" },
@@ -3189,6 +3191,21 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f0/55/ecc3cfb2168177440d42fdea999a3c64a92e97e1e3fde9884a19408aab4c/spython-0.3.14.tar.gz", hash = "sha256:8ad53ef034395cfa2d8a710cc1c3638e4475e5bbc6a2842d317db8013c2e4188", size = 69164 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f9/38/8b6fc7a8153cb49eb3a9a13acfa9eeb6cc476e37888781e593e6f02ac05e/spython-0.3.14-py3-none-any.whl", hash = "sha256:72968583e498bc2a51f9acd0ed6bc0d7d1f7ccd491feaba5e2f7d944bc51da3a", size = 109720 },
+]
+
+[[package]]
+name = "stac-validator"
+version = "3.6.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "jsonschema" },
+    { name = "referencing" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7d/9f/eb049f6a4477d473fca49b71378d269f6d6b80de9122075c38282f0747c9/stac_validator-3.6.0.tar.gz", hash = "sha256:6bc674682a4c0dd271ab3cfbfc3e0f1daa33b3b69a6802532a786f9e397d4f8a", size = 18848 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ae/97/98bd5a40b10661253c282e0bf4e693cea1bb9255dcafb8407fe33726c7b0/stac_validator-3.6.0-py3-none-any.whl", hash = "sha256:ef0628ea9d2fc71489ee76103c24d5632344b9c240910827618c81982f6a3a26", size = 18253 },
 ]
 
 [[package]]
